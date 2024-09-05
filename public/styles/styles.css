@@ -1,0 +1,95 @@
+/* font awesome icons */
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+body{
+    background-color: #0b5489 !important;
+}
+
+/* navbar */
+.navbar{
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 10;
+}
+
+.navbar-brand{
+    font-size: 30px !important;
+}
+
+.offcanvas-custom {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1055;
+}
+
+/* sidenav */
+#side-nav {
+    position: fixed;
+    top: 40%;
+    right: 0;
+    padding: 10px;
+}
+
+#side-nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+#side-nav ul li {
+    margin-bottom: 15px;
+}
+
+#side-nav ul li a {
+    text-decoration: none;
+    color: #fff !important;
+    font-size: 24px;
+    display: block;
+    position: relative;
+}
+
+#side-nav li a:hover .fa {
+    color: #8dc84a;
+}
+
+/* contenido */
+#container{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    margin-top: 160px;
+    margin-left: 200px;
+    padding: 15px 60px;
+}
+
+#container h1 {
+    color: #ffff;
+    font-weight: 600;
+}
+
+#container p {
+    color: #ffff;
+}
+
+#container h3{
+    color: #8dc84a;
+}
+
+.btn-join{
+    background-color: #8dc84a;
+    color: #fff;
+    font-size: 20px;
+    border: solid #8dc84a;
+    padding: 8px 13px;
+    border-radius: 10px;
+}
+
+.btn-join:hover{
+    background-color: #0b5489;
+    color: #fff;
+    border: solid 3px #8dc84a;
+}
