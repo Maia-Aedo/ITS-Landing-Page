@@ -11,16 +11,16 @@ body{
 /* fuera de la pantalla inicio, abre al hacer click en el menu*/
 .nav {
     height: 100%;
-    width: 100%;
+    width: 80%;
     position: fixed;
-    z-index: 1; /* que se muestre por encima de todo el content */
+    z-index: 1; /* que se muestre por encima de todo el content (pero debajo de los iconos) */
     top: 0;
     right: 0;
     background-color: #0071bc; 
-    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-x: hidden;
     padding-top: 60px;
-    transform: translateX(100%);
-    transition: transform 0.5s ease;
+    transform: translateX(100%); /* al principio se muestra fuera de pantalla */
+    transition: transform 0.5s ease; /* suaviza tansicion */
     display: flex;
     justify-content: center;
     text-align: center;
@@ -38,7 +38,9 @@ body{
 }
 
 /* sidenav */
-#side-nav {
+#side-nav{
+    /* para que este encima del menu */
+    z-index: 2;
     position: fixed;
     right: 0;
     top: 0;
@@ -47,7 +49,16 @@ body{
     display: flex;
     flex-direction: column;
     width: 85px;
-    padding: 0;
+    padding: 0;/* al principio se muestra fuera de pantalla */
+    transition: transform 0.5s ease;
+}
+
+#side-nav.closed {
+    transform: translateX(0);
+}
+
+#side-nav.open {
+    transform: translateX(-500px);
 }
 
 .bars{
@@ -64,6 +75,9 @@ body{
 #bars{
     font-size: 30px;
     color: #0071bc;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 999;
 }
 
 /* iconos */
@@ -94,6 +108,13 @@ body{
 
 #side-nav li a:hover .fa {
     color: #8dc84a;
+}
+
+#container-iconos {
+    opacity: 1; /* Asegura que no se modifique la opacidad */
+    z-index: 2; /* Mayor z-index que el menú */
+    display: flex;
+    align-items: center;
 }
 
 /* cuando el menu esta abierto */
