@@ -52,7 +52,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
         password: password,
         telefono: telefono,
         ciudad: ciudad,
-        opciones: opciones,
+        provincia: opciones,
         textarea: textarea
     };
 
