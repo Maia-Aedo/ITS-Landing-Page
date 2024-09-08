@@ -171,6 +171,16 @@ body{
     font-size: 20px;
 }
 
+/* animaciones para el boton al cargar pag */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .btn-join{
     background-color: var(--secondary);
     color: var(--white);
@@ -178,6 +188,18 @@ body{
     border: solid var(--secondary);
     padding: 8px 13px;
     border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.spinner-active{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* convierte el botón en circulo */
+    border: 5px solid #0071bc;
+    border-top: 5px solid #8dc84a;
+    color: transparent; /* no se ve el texto */
+    line-height: 50px;
+    animation: spin 1s linear infinite; /* añade la animacion */
 }
 
 .btn-join:hover{
@@ -185,6 +207,8 @@ body{
     color: #fff;
     border: solid 3px var(--secondary);
 }
+
+   
 
 /* RESPONSIVE */
 @media(max-width: 900px) {

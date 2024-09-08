@@ -18,3 +18,15 @@ function toggleNav() {
         iconMenu.classList.add("fa-bars");
     }
 }
+
+// estilos para el boton de cargando
+window.onload = function() {
+    // busca la clase del boton
+    var button = document.querySelector(".btn-join");
+
+    // espera la duración de la animación (1 seg) para remover la clase
+    setTimeout(function() {
+        button.classList.remove("spinner-active");
+    }, 1000); // espera 1 segundo, que es la duración de la animación
+};
+
